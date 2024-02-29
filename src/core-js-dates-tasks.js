@@ -240,12 +240,14 @@ function getWeekNumberByDate(date) {
  */
 function getNextFridayThe13th(date) {
   const currentDate = new Date(date.setDate(13));
-  while (true) {
+  const bool = true;
+  while (bool) {
     if (currentDate.getDate() === 13 && currentDate.getDay() === 5) {
       return currentDate;
     }
     currentDate.setMonth(currentDate.getMonth() + 1);
   }
+  return null;
 }
 
 /**
